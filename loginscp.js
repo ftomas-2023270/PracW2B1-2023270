@@ -7,14 +7,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         event.preventDefault(); // Evita que el formulario se envíe
         alert('Por favor, completa todos los campos antes de iniciar sesión.');
     }
-});
+}); 
 
-// Funcionalidad para alternar los detalles de los contactos
-document.querySelectorAll('.toggle-details').forEach(button => {
-    button.addEventListener('click', function() {
-        const details = this.nextElementSibling;
-        const isVisible = details.style.display === 'block';
-        details.style.display = isVisible ? 'none' : 'block';
-        this.textContent = isVisible ? 'Mostrar más' : 'Mostrar menos';
-    });
-});
+// Redirige a contacts.html cuando el formulario sea enviado
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita el comportamiento por defecto del formulario
+    window.location.href = "contact.html"; // Redirige a la página de contactos
+}); 
