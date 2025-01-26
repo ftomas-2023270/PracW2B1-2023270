@@ -1,6 +1,10 @@
-body{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: url(src/33628-397860881_small.mp4);
+    color: white;
 }
+
 video {
     position: fixed;
     top: 0;
@@ -11,11 +15,19 @@ video {
     z-index: -1; /* Pone el video detrás del contenido */
 }
 
-  /* Estilo para el contenido que aparecerá encima del video */
-.contenido {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    padding: 50px;
+.card {
+    background: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra suave */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
