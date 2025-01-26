@@ -9,3 +9,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 });
 
+// Funcionalidad para alternar los detalles de los contactos
+document.querySelectorAll('.toggle-details').forEach(button => {
+    button.addEventListener('click', function() {
+        const details = this.nextElementSibling;
+        const isVisible = details.style.display === 'block';
+        details.style.display = isVisible ? 'none' : 'block';
+        this.textContent = isVisible ? 'Mostrar más' : 'Mostrar menos';
+    });
+});
