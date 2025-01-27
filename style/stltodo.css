@@ -1,0 +1,54 @@
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+.menu {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px; /* Fijo para mantener el tamaño constante */
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+.menu h4 {
+    margin-bottom: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #34495E;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    background-color: #1ABC9C;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.user-profile h5 {
+    margin: 0 0 10px 0;
+}
+
+.content {
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio restante */
+}
+
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
