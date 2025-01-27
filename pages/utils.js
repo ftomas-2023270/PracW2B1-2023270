@@ -1,3 +1,16 @@
+// Recuperar los datos almacenados en localStorage
+const userEmail = localStorage.getItem("userEmail");
+
+// Muestra el email en el perfil de usuario
+if (userEmail) {
+    document.getElementById("userEmail").innerText = userEmail;
+} else {
+    // Si no hay datos, redirige al login
+    alert("No estás autenticado. Por favor, inicia sesión.");
+    window.location.href = "../index.html";
+}
+
+
 // Funcionalidad para alternar los detalles de los contactos
 // Alternar detalles de contactos
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,4 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
             this.textContent = isVisible ? "Mostrar más" : "Mostrar menos";
         });
     });
+});
+
+document.getElementById("logoutButton").addEventListener("click", function () {
+    // Redirige a la página de inicio de sesión
+    window.location.href = "../index.html";
 });

@@ -1,20 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Menú lateral */
 .menu {
-    width: 200px;
-    height: 100vh;
-    background-color: #007bff; /* Fondo azul */
+    width: 20%;
+    background-color: #2C3E50;
+    color: white;
     padding: 20px;
-    position: fixed;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    color: white;
+    gap: 10px;
 }
 
 .menu h4 {
@@ -22,45 +20,48 @@ body {
 }
 
 .menu a {
-    color: white;
     text-decoration: none;
-    margin: 10px 0;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .menu a:hover {
-    text-decoration: underline;
+    background-color: #34495E;
 }
 
-/* Contenido principal */
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    background-color: #1ABC9C;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.user-profile h5 {
+    margin: 0 0 10px 0;
+}
+
 .content {
-    margin-left: 220px; /* Anchura del menú */
+    flex: 1;
     padding: 20px;
 }
 
 .contact-card {
-    background-color: white;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .contact-details {
-    display: none; /* Oculto inicialmente */
+    display: none;
 }
 
-.toggle-details {
-    cursor: pointer;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .menu {
-        width: 150px;
-    }
-
-    .content {
-        margin-left: 170px;
-    }
+.contact-card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
